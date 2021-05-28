@@ -1,0 +1,2649 @@
+class 2---------------------------------------------------------------------------------
+1.git
+2.pwd-present working directory
+3.cd Desktop-change directory
+4.cd /c - move to c folder
+5.git status
+6.git config --global user.name "Priyanshu Chaudhary"
+7.git config --global user.email "priyanshutaker7772@gmail.com"
+8.git config --list
+9.git config --global core.editor emacs{linux}
+10.git config --global core.editor vim{linux}
+11.git config user.name
+Priyanshu Chaudhary
+12.git config user.email
+priyanshutaker7772@gmail.com
+
+
+class 4---------------------------------------------------------------------------------
+1.git status
+fatal: not a git repository (or any of the parent directories): .git
+
+2.git init
+Initialized empty Git repository in C:/Users/bahvi/Desktop/code playground/Tuts/Git tutorials/.git/
+
+3. git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.txt
+        myexcel.xlsx
+        tensorflow/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+4.git add --a :- to put all files in staging area
+
+5. git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+        new file:   myexcel.xlsx
+        new file:   tensorflow
+
+6.git commit -m "Initial Commit"
+[master (root-commit) a44d516] Initial Commit
+ 3 files changed, 3 insertions(+)
+ create mode 100644 first.txt
+ create mode 100644 myexcel.xlsx
+ create mode 160000 tensorflow
+
+7.git status
+On branch master
+nothing to commit, working tree clean
+
+8.git log:- to check commit 
+EX-
+git log
+commit a44d516766db536552da1a34e7855466a0ebfba6 (HEAD -> master)
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Sun Apr 11 17:05:05 2021 +0530
+
+    Initial Commit
+
+9.After changing in file first.txt 
+ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+10.After changing in myexcel.xlsx
+ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first.txt
+        modified:   myexcel.xlsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+11.git add first.txt
+
+12.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   first.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   myexcel.xlsx
+
+13.git commit -m "Changed first.txt and added better design"
+[master 21a3f52] Changed first.txt and added better design
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+14.git add --a
+
+15.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   myexcel.xlsx
+
+
+16.git commit -m "This is modified myexcel"
+[master f922aa3] This is modified myexcel
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+17.git log
+commit f922aa34791d3b74632ad57ddde8893c631f4116 (HEAD -> master)
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Sun Apr 11 17:26:13 2021 +0530
+
+    This is modified myexcel
+
+commit 21a3f522c6bef056df25be02811655e299a2401c
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Sun Apr 11 17:18:21 2021 +0530
+
+    Changed first.txt and added better design
+
+commit a44d516766db536552da1a34e7855466a0ebfba6
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Sun Apr 11 17:05:05 2021 +0530
+
+    Initial Commit
+
+
+
+class 5----------------------------------------------------------------------------------
+Step 1:-goto browser and search github website tensorflow
+
+Step 2:-open tensorflow repository
+
+1.rm -rf .git:- to delete git repository
+
+2.git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Step 3:- copy url from tensorflow
+
+3.git clone "url"
+
+4.git clone "url" "Changed name"{if you want to change name of repository}
+
+5.pwd
+/c/Users/bahvi/Desktop/code playground/Tuts/Git tutorials
+
+6.ls:-list content which is present in folder
+Ex-
+ls
+first.txt  myexcel.xlsx  tensorflow/
+
+7.cd tensorflow/
+
+8.pwd
+/c/Users/bahvi/Desktop/code playground/Tuts/Git tutorials/tensorflow
+
+9.ls
+ACKNOWLEDGMENTS          CODEOWNERS            ISSUE_TEMPLATE.md            RELEASE.md    WORKSPACE
+arm_compiler.BUILD             configure*                   ISSUES.md                             SECURITY.md
+AUTHORS                              configure.cmd             LICENSE                                 tensorflow/
+BUILD                                    configure.py                models.BUILD                       third_party/
+CODE_OF_CONDUCT.md     CONTRIBUTING.md     README.md                          tools/
+
+10.After changing in README.md inside tensorflow
+git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+11.git add --a
+
+12.git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+13.git commit -m "Changed README.md"
+[master 8fb392f9a29] Changed README.md
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+14.git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+15.git log
+commit 8fb392f9a29839925386efc9a8a8f8ca2b85eb5a (HEAD -> master)
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Mon Apr 12 09:05:12 2021 +0530
+
+    Changed README.md
+
+commit b6d2afeb030757db52ff780924225db6fc651975
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Thu Apr 1 11:27:21 2021 +0530
+
+    changed readme
+
+commit 72605f9a0a0825674c975a0164e385da988ecaa1 (origin/master, origin/HEAD)
+Author: Rick Chao <rchao@google.com>
+Date:   Wed Mar 31 22:15:49 2021 -0700
+
+    tf.distribute input_lib: Have _SingleWorkerDatasetIteratorSpec._options to be an empty InputOptions object rather than None for proper serialization.
+
+    PiperOrigin-RevId: 366184314
+    Change-Id: I285e4a5feccb8413b360a7c42dd2dd37672769ef
+
+commit 5047cad268c7a6bd3a56f6849d463b67e36274c4
+:...skipping...
+commit 8fb392f9a29839925386efc9a8a8f8ca2b85eb5a (HEAD -> master)
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Mon Apr 12 09:05:12 2021 +0530
+
+    Changed README.md
+
+commit b6d2afeb030757db52ff780924225db6fc651975
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Thu Apr 1 11:27:21 2021 +0530
+
+    changed readme
+
+commit 72605f9a0a0825674c975a0164e385da988ecaa1 (origin/master, origin/HEAD)
+Author: Rick Chao <rchao@google.com>
+Date:   Wed Mar 31 22:15:49 2021 -0700
+
+    tf.distribute input_lib: Have _SingleWorkerDatasetIteratorSpec._options to be an empty InputOptions object rather than None for proper serialization.
+
+    PiperOrigin-RevId: 366184314
+    Change-Id: I285e4a5feccb8413b360a7c42dd2dd37672769ef
+
+commit 5047cad268c7a6bd3a56f6849d463b67e36274c4
+Author: Rick Chao <rchao@google.com>
+Date:   Wed Mar 31 21:58:45 2021 -0700
+
+    MultiProcessRunner: Add logging of TF_CONFIG at the start of subprocess for debugging.
+
+    PiperOrigin-RevId: 366182566
+    Change-Id: I161b3cc19ec5ddcb6a21d618bbefb36699087aca
+
+commit d877c44fdfc56d12fff3165e194762a9888efbb3
+Author: A. Unique TensorFlower <gardener@tensorflow.org>
+Date:   Wed Mar 31 21:48:51 2021 -0700
+
+    Go: Update generated wrapper functions for TensorFlow ops.
+
+    PiperOrigin-RevId: 366181744
+    Change-Id: I3c220d785d5798529a8a4c51c0c248111499f50e
+
+commit c86acd4b89435733ca8d8d145d010897d1b17496
+Merge: b1b396571be cdddd097fa9
+Author: TensorFlower Gardener <gardener@tensorflow.org>
+Date:   Wed Mar 31 21:05:26 2021 -0700
+
+    Merge pull request #47650 from ROCmSoftwarePlatform:google_upstream_rocm_amp
+
+    PiperOrigin-RevId: 366176810
+    Change-Id: Icaef4795f1606848d7ec8ee10f4d36109d39d3b4
+
+:
+
+16.q:-to exit from the log
+
+
+class 6-------------------------------------------------------------------------------------
+1.git status
+fatal: not a git repository (or any of the parent directories): .git
+
+2.git init
+Initialized empty Git repository in C:/Users/bahvi/Desktop/code playground/Tuts/Git tutorials/.git/
+
+3.git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.txt
+        myexcel.xlsx
+        tensorflow/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+4.git add --a
+
+5.git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+        new file:   myexcel.xlsx
+        new file:   tensorflow
+
+6.After change first.txt
+git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+        new file:   myexcel.xlsx
+        new file:   tensorflow
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first.txt
+
+7.git add first.txt
+
+8.git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+        new file:   myexcel.xlsx
+        new file:   tensorflow
+
+
+class 7------------------------------------------------------------------------------------
+1.git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+        new file:   myexcel.xlsx
+        new file:   tensorflow
+
+2.git commit -m "Git tutorial 7"
+[master (root-commit) 5acae9a] Git tutorial 7
+ 3 files changed, 4 insertions(+)
+ create mode 100644 first.txt
+ create mode 100644 myexcel.xlsx
+ create mode 160000 tensorflow
+
+3.git status
+On branch master
+nothing to commit, working tree clean
+
+4.touch <filename>{for empty file}
+Ex-
+touch error.log
+
+5.git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        error.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+6.touch .gitignore
+
+7.git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        error.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+8.After writing "error.log" inside the .gitignore and then
+git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+9.git add .
+
+10.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+11.git commit -m "Added gitignore"
+[master 650b3d3] Added gitignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+12.After this if we changed error.log and then
+git status
+On branch master
+nothing to commit, working tree clean
+
+13.After copying 5-6 files of error.log and then 
+ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        error - Copy (2).log
+        error - Copy (3).log
+        error - Copy (4).log
+        error - Copy (5).log
+        error - Copy (6).log
+        error - Copy (7).log
+        error - Copy.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+14.After writing "*.log" inside gitignore and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+15.After making a directory and then 
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        dir/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+16.After writing "dir/" inside .gitignore and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+17.Blank folder is always be ignored by git
+After making a folder "static" and make another folder inside static i.e,"dir" and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+18.After making a text file inside the static folder and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        static/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+19.git add --a
+
+20.git commit -m "Added static"
+[master fbfb906] Added static
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 static/tex.txt
+
+21.git status
+On branch master
+nothing to commit, working tree clean
+
+22.After changing in text file which is present in dir folder inside the static folder and then
+git status
+On branch master
+nothing to commit, working tree clean
+
+23.if we write "/dir/" inside the .gitignore and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        static/dir/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+24.undo last step and then
+git status
+On branch master
+nothing to commit, working tree clean
+ 
+25.if we write "/dir/" and "static/dir" inside the .gitignore and then 
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+26.if we changed text file inside the static folder and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   static/tex.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+class8---------------------------------------------------------------------------------------
+1.git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   static/tex.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2. git add .
+
+3.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        modified:   static/tex.txt
+
+4.After made changes inside "tex.txt" inside static folder and then
+git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        modified:   static/tex.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   static/tex.txt
+
+5.git diff:- it compare the working directory with staging area
+Ex-
+git diff
+diff --git a/static/tex.txt b/static/tex.txt
+index 645b224..29622de 100644
+--- a/static/tex.txt
++++ b/static/tex.txt
+@@ -1 +1 @@
+-fjhbker
+\ No newline at end of file
++Taker bhai
+\ No newline at end of file
+
+6.git add .
+
+7.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        modified:   static/tex.txt
+
+8.git diff:- it shows nothing
+
+9.git diff --staged:-compare last commit with the present staging area
+Ex-
+git diff --staged
+diff --git a/.gitignore b/.gitignore
+index a135832..bf00e86 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,2 +1,3 @@
+ *.log
+-dir/
+\ No newline at end of file
++/dir/
++static/dir
+\ No newline at end of file
+diff --git a/static/tex.txt b/static/tex.txt
+index e69de29..29622de 100644
+--- a/static/tex.txt
++++ b/static/tex.txt
+@@ -0,0 +1 @@
++Taker bhai
+\ No newline at end of file
+
+10.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        modified:   static/tex.txt
+
+
+class 9----------------------------------------------------------------------------------
+1.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        modified:   static/tex.txt
+
+2.git commit -m "This is a good commit"
+[master 5b4b057] This is a good commit
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+3.git status
+On branch master
+nothing to commit, working tree clean
+
+4.git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+5.After creating a new text file "sceond.txt" and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        second.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+6.git commit -a -m "Direct commit":-it staged all tracked files and make a commit
+git commit -a -m "Direct commit"
+[master 1b1b610] Direct commit
+ 1 file changed, 1 insertion(+)
+
+7.git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        second.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+8.git add second.txt
+
+9.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   second.txt
+
+10.git commit -a -m "Direct commit"
+[master 6595bfa] Direct commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 second.txt
+
+11.git status
+On branch master
+nothing to commit, working tree clean
+
+12.git log
+commit 6595bfad357f9c1cdc6c9438313eeffea3ec535a (HEAD -> master)
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Wed Apr 14 11:43:26 2021 +0530
+
+    Direct commit
+
+commit 1b1b610cce435c1d5fb7257041911656409598a0
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Wed Apr 14 11:37:08 2021 +0530
+
+    Direct commit
+
+commit 5b4b057e9db2b663e0ae957bf9d9e0545fe55774
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Wed Apr 14 11:29:02 2021 +0530
+
+    This is a good commit
+
+commit fbfb906d4329269ed03d3bce91837da793160d7c
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Mon Apr 12 10:19:18 2021 +0530
+
+    Added static
+:
+
+11.q
+
+
+class 10----------------------------------------------------------------------------------
+1.git status
+On branch master
+nothing to commit, working tree clean
+
+2.if we rename "second.txt" file as "third.txt" and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    second.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+3.After we staged "third.txt" i.e,
+git add .
+
+4.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    second.txt -> third.txt
+
+5.git commit -m "Rename second to third"
+[master 74acc91] Rename second to third
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename second.txt => third.txt (100%)
+
+6.After deleting third.txt and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+7.if we undo delete "third.txt" and then
+git status
+On branch master
+nothing to commit, working tree clean
+
+8.git rm third.txt:- to remove "third.txt" from git
+Ex-
+git rm third.txt
+rm 'third.txt'
+
+9.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    third.txt
+
+10.git commit -m "remove bad file third.txt"
+[master 2e5e0a8] remove bad file third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+11.git mv first.txt first_rename.txt:- to rename "first.txt" from git
+
+12.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    first.txt -> first_rename.txt
+
+13.git commit -m "renamed"
+[master c761691] renamed
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename first.txt => first_rename.txt (100%)
+
+14.git status
+On branch master
+nothing to commit, working tree clean
+
+15.After  writing "myexcel.xlsx" in .gitignore and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+16.git add .
+
+17.git commit -m "changed gitignore"
+[master b02bf80] changed gitignore
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+18.After changing the "myexcel.xlsx" and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   myexcel.xlsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+19.git rm --cached myexcel.xlsx:- to untrack myexcel.xlsx
+git rm --cached myexcel.xlsx
+rm 'myexcel.xlsx'
+
+20.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    myexcel.xlsx
+
+21.git commit -m "removed myexcel.xlsx"
+[master 5e70095] removed myexcel.xlsx
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 myexcel.xlsx
+
+22.git status
+On branch master
+nothing to commit, working tree clean
+
+23.Again after changing myexcel.xlsx if we used "git status" then now it doesn't show anything because it is in .gitignore
+Ex-
+git status
+On branch master
+nothing to commit, working tree clean
+
+24.now if we remove myexcel.xlsx from ".gitignore" and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        myexcel.xlsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+class 11----------------------------------------------------------------------------------------
+1.git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        myexcel.xlsx
+
+2.git add .
+
+3.git commit -m "for tutorial"
+[master afd9ef0] for tutorial
+ 2 files changed, 1 deletion(-)
+ create mode 100644 myexcel.xlsx
+
+4.git status
+On branch master
+nothing to commit, working tree clean
+
+5.rm -rf .git
+
+6.git status
+fatal: not a git repository (or any of the parent directories): .git
+
+7.goto browser and type "pandas github" and open the first link and copy the url just like tensorflow
+ 
+8.git clone https://github.com/pandas-dev/pandas.git:- to make a clone of pandas github
+and used as command:-
+git clone https://github.com/pandas-dev/pandas.git "any name"
+
+Ex-
+git clone https://github.com/pandas-dev/pandas.git mypanda
+Cloning into 'mypanda'...
+remote: Enumerating objects: 270620, done.
+remote: Counting objects: 100% (217/217), done.
+remote: Compressing objects: 100% (132/132), done.
+remote: Total 270620 (delta 97), reused 155 (delta 85), pack-reused 270403
+Receiving objects: 100% (270620/270620), 216.33 MiB | 538.00 KiB/s, done.
+Resolving deltas: 100% (226015/226015), done.
+Updating files: 100% (2271/2271), done.
+
+9.git status
+fatal: not a git repository (or any of the parent directories): .git
+{because we create a repository mypanda so here it doesn't show anything}
+
+10.goto git tutorial folder and open mypanda folder and use right click of mouse to open git bash
+
+11.git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+12.git log
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+commit 024159b7b596c2bd7d2580cc85c5988d21fb7069
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:09:44 2021 -0700
+
+    CLN: de-duplicate reindex/align code (#40968)
+
+commit 0a3cbd9f5cf4e59a220dab79339a0574e21c4574
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:07:49 2021 -0700
+
+    TYP: Index.reindex (#40950)
+
+commit 1f27ed0adc2fea2dd301d2dccab5215afaca0e6b
+Author: Marco Gorelli <marcogorelli@protonmail.com>
+Date:   Fri Apr 16 02:06:47 2021 +0100
+
+:
+
+13.q
+
+14.git log -p:-it shows commit as well as what is to be removed
+Ex-
+git log -p
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+diff --git a/doc/source/whatsnew/v1.3.0.rst b/doc/source/whatsnew/v1.3.0.rst
+index 1b011be839..2b0b62ab7f 100644
+--- a/doc/source/whatsnew/v1.3.0.rst
++++ b/doc/source/whatsnew/v1.3.0.rst
+@@ -750,6 +750,7 @@ I/O
+ - Bug in :func:`read_hdf` returning unexpected records when filtering on categorical string columns using ``where`` parameter (:issue:`39189`)
+ - Bug in :func:`read_sas` raising ``ValueError`` when ``datetimes`` were null (:issue:`39725`)
+ - Bug in :func:`read_excel` dropping empty values from single-column spreadsheets (:issue:`39808`)
++- Bug in :meth:`DataFrame.to_string` misplacing the truncation column when ``index=False`` (:issue:`40907`)
+
+ Period
+ ^^^^^^
+:
+
+15.q
+
+16.git log -3:- to show 3 commits only
+Ex-
+git log -3
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+commit 024159b7b596c2bd7d2580cc85c5988d21fb7069
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:09:44 2021 -0700
+
+    CLN: de-duplicate reindex/align code (#40968)
+
+commit 0a3cbd9f5cf4e59a220dab79339a0574e21c4574
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:07:49 2021 -0700
+
+    TYP: Index.reindex (#40950)
+
+17.git log --stat:- to short summary
+Ex-
+git log --stat
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+ doc/source/whatsnew/v1.3.0.rst            |  1 +
+ pandas/io/formats/string.py               |  3 ++-
+ pandas/tests/io/formats/test_to_string.py | 34 +++++++++++++++++++++++++++++++
+ 3 files changed, 37 insertions(+), 1 deletion(-)
+
+commit 024159b7b596c2bd7d2580cc85c5988d21fb7069
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:09:44 2021 -0700
+
+    CLN: de-duplicate reindex/align code (#40968)
+
+ pandas/core/generic.py | 61 +++++++++++++++++++++++---------------------------
+ 1 file changed, 28 insertions(+), 33 deletions(-)
+
+commit 0a3cbd9f5cf4e59a220dab79339a0574e21c4574
+Author: jbrockmendel <jbrockmendel@gmail.com>
+:
+
+18. git log --pretty=oneline:- to show in one line all commits
+Ex-
+ git log --pretty=oneline
+526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD) BUG: to_string truncation column with index=False (#40907)
+024159b7b596c2bd7d2580cc85c5988d21fb7069 CLN: de-duplicate reindex/align code (#40968)
+0a3cbd9f5cf4e59a220dab79339a0574e21c4574 TYP: Index.reindex (#40950)
+1f27ed0adc2fea2dd301d2dccab5215afaca0e6b STYLE use pandas-dev-flaker (#40906)
+499aa67a6e71dad683d1d0e99f6109c3085f4879 [ArrowStringArray] TST: more parameterised testing - part 4 (#40963)
+cc0ddf6f18c7ebb67b2605e337f5dd4a2796197e BUG: Series.loc raising KeyError for Iterator indexer in case of setitem (#39623)
+8fd8c8bcd40963d4b274f77a804198b5c82adb17 TYP overload fillna #40737 (#40887)
+77bbb5d7eae01baaa0975fbc3af2afca6513713d [ArrowStringArray] CLN: move and rename test_string_methods (#40960)
+1234545ab9aae9fffcc4e3ce684a326d5332843f refactor tests outside of class setup (#40958)
+7f894005afeb3b8f94e3ce2a5c2c412d0576493d [ArrowStringArray] CLN: imports (#40961)
+85671b998fca80f6e25d5a95d8225a068f1318c7 Add 'virt' and 'group' settings for arm64-graviton2 (#40959)
+1e94d9f8fc8ebdba85aa2c3fb5f9413d424c6e62 TST: [ArrowStringArray] more parameterised testing - part 2 (#40749)
+77050d32d231c6967ac3e82674a6a01aaf5dcd09 DOC/CI: add missing import to ipython directive in `whatsnew/v0.11.0.rst` (#40937)
+:
+
+19.git log --pretty=short
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+
+    BUG: to_string truncation column with index=False (#40907)
+
+commit 024159b7b596c2bd7d2580cc85c5988d21fb7069
+Author: jbrockmendel <jbrockmendel@gmail.com>
+
+    CLN: de-duplicate reindex/align code (#40968)
+
+commit 0a3cbd9f5cf4e59a220dab79339a0574e21c4574
+Author: jbrockmendel <jbrockmendel@gmail.com>
+
+    TYP: Index.reindex (#40950)
+
+commit 1f27ed0adc2fea2dd301d2dccab5215afaca0e6b
+Author: Marco Gorelli <marcogorelli@protonmail.com>
+
+    STYLE use pandas-dev-flaker (#40906)
+
+commit 499aa67a6e71dad683d1d0e99f6109c3085f4879
+Author: Simon Hawkins <simonjayhawkins@gmail.com>
+:
+
+20.q
+
+21.git log --pretty=full
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Commit: GitHub <noreply@github.com>
+
+    BUG: to_string truncation column with index=False (#40907)
+
+commit 024159b7b596c2bd7d2580cc85c5988d21fb7069
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Commit: GitHub <noreply@github.com>
+
+    CLN: de-duplicate reindex/align code (#40968)
+
+commit 0a3cbd9f5cf4e59a220dab79339a0574e21c4574
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Commit: GitHub <noreply@github.com>
+
+    TYP: Index.reindex (#40950)
+
+commit 1f27ed0adc2fea2dd301d2dccab5215afaca0e6b
+Author: Marco Gorelli <marcogorelli@protonmail.com>
+Commit: GitHub <noreply@github.com>
+
+:...skipping...
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Commit: GitHub <noreply@github.com>
+
+    BUG: to_string truncation column with index=False (#40907)
+
+commit 024159b7b596c2bd7d2580cc85c5988d21fb7069
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Commit: GitHub <noreply@github.com>
+
+    CLN: de-duplicate reindex/align code (#40968)
+
+commit 0a3cbd9f5cf4e59a220dab79339a0574e21c4574
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Commit: GitHub <noreply@github.com>
+
+    TYP: Index.reindex (#40950)
+
+commit 1f27ed0adc2fea2dd301d2dccab5215afaca0e6b
+Author: Marco Gorelli <marcogorelli@protonmail.com>
+Commit: GitHub <noreply@github.com>
+
+    STYLE use pandas-dev-flaker (#40906)
+
+:
+
+22.q
+
+23.git log --since=2.days
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+commit 024159b7b596c2bd7d2580cc85c5988d21fb7069
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:09:44 2021 -0700
+
+    CLN: de-duplicate reindex/align code (#40968)
+
+commit 0a3cbd9f5cf4e59a220dab79339a0574e21c4574
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:07:49 2021 -0700
+
+    TYP: Index.reindex (#40950)
+
+commit 1f27ed0adc2fea2dd301d2dccab5215afaca0e6b
+Author: Marco Gorelli <marcogorelli@protonmail.com>
+Date:   Fri Apr 16 02:06:47 2021 +0100
+
+    STYLE use pandas-dev-flaker (#40906)
+
+:
+
+24.q
+
+25.git log --since=2.weeks
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+commit 024159b7b596c2bd7d2580cc85c5988d21fb7069
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:09:44 2021 -0700
+
+    CLN: de-duplicate reindex/align code (#40968)
+
+commit 0a3cbd9f5cf4e59a220dab79339a0574e21c4574
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:07:49 2021 -0700
+
+    TYP: Index.reindex (#40950)
+
+commit 1f27ed0adc2fea2dd301d2dccab5215afaca0e6b
+Author: Marco Gorelli <marcogorelli@protonmail.com>
+Date:   Fri Apr 16 02:06:47 2021 +0100
+
+    STYLE use pandas-dev-flaker (#40906)
+
+:
+
+26.q
+
+27.git log --since=2.months
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+commit 024159b7b596c2bd7d2580cc85c5988d21fb7069
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:09:44 2021 -0700
+
+    CLN: de-duplicate reindex/align code (#40968)
+
+commit 0a3cbd9f5cf4e59a220dab79339a0574e21c4574
+Author: jbrockmendel <jbrockmendel@gmail.com>
+Date:   Thu Apr 15 18:07:49 2021 -0700
+
+    TYP: Index.reindex (#40950)
+
+commit 1f27ed0adc2fea2dd301d2dccab5215afaca0e6b
+Author: Marco Gorelli <marcogorelli@protonmail.com>
+Date:   Fri Apr 16 02:06:47 2021 +0100
+
+    STYLE use pandas-dev-flaker (#40906)
+
+:
+
+28.q
+
+29.goto browser and typed "git scm useful options for git log format"
+open git log documentation and checkout pretty formats
+%h
+abbreviated commit hash
+%an
+author name
+%ae
+author email
+
+30.git log --pretty=format:"%h -- %an"
+Ex-
+git log --pretty=format:"%h -- %an"
+526d52f91e -- mikeronayne
+024159b7b5 -- jbrockmendel
+0a3cbd9f5c -- jbrockmendel
+1f27ed0adc -- Marco Gorelli
+499aa67a6e -- Simon Hawkins
+cc0ddf6f18 -- patrick
+8fd8c8bcd4 -- Larry Wong
+77bbb5d7ea -- Simon Hawkins
+1234545ab9 -- attack68
+7f894005af -- Simon Hawkins
+85671b998f -- Martin Grigorov
+1e94d9f8fc -- Simon Hawkins
+77050d32d2 -- attack68
+1b48287380 -- Simon Hawkins
+a25198cb57 -- DriesS
+84d9c5ed79 -- jbrockmendel
+ce6162bb49 -- jbrockmendel
+42c7fafdaa -- patrick
+1097f7eeb7 -- jbrockmendel
+0363f84132 -- jbrockmendel
+702e6e7b6b -- jbrockmendel
+380904d856 -- jbrockmendel
+32d650ddb3 -- Brian Sun
+918e9f42e8 -- jbrockmendel
+b4e95661e4 -- patrick
+:
+
+31.q
+
+32.git log --pretty=format:"%h -- %ae"
+526d52f91e -- michaelronayne@me.com
+024159b7b5 -- jbrockmendel@gmail.com
+0a3cbd9f5c -- jbrockmendel@gmail.com
+1f27ed0adc -- marcogorelli@protonmail.com
+499aa67a6e -- simonjayhawkins@gmail.com
+cc0ddf6f18 -- 61934744+phofl@users.noreply.github.com
+8fd8c8bcd4 -- 33496254+LarWong@users.noreply.github.com
+77bbb5d7ea -- simonjayhawkins@gmail.com
+1234545ab9 -- 24256554+attack68@users.noreply.github.com
+7f894005af -- simonjayhawkins@gmail.com
+85671b998f -- martin-g@users.noreply.github.com
+1e94d9f8fc -- simonjayhawkins@gmail.com
+77050d32d2 -- 24256554+attack68@users.noreply.github.com
+1b48287380 -- simonjayhawkins@gmail.com
+a25198cb57 -- dries.schaumont@gmail.com
+84d9c5ed79 -- jbrockmendel@gmail.com
+ce6162bb49 -- jbrockmendel@gmail.com
+42c7fafdaa -- 61934744+phofl@users.noreply.github.com
+1097f7eeb7 -- jbrockmendel@gmail.com
+0363f84132 -- jbrockmendel@gmail.com
+702e6e7b6b -- jbrockmendel@gmail.com
+380904d856 -- jbrockmendel@gmail.com
+32d650ddb3 -- 52805678+bsun94@users.noreply.github.com
+918e9f42e8 -- jbrockmendel@gmail.com
+b4e95661e4 -- 61934744+phofl@users.noreply.github.com
+:
+
+33.q
+
+34.git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+35.git log -p -1
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+diff --git a/doc/source/whatsnew/v1.3.0.rst b/doc/source/whatsnew/v1.3.0.rst
+index 1b011be839..2b0b62ab7f 100644
+--- a/doc/source/whatsnew/v1.3.0.rst
++++ b/doc/source/whatsnew/v1.3.0.rst
+@@ -750,6 +750,7 @@ I/O
+ - Bug in :func:`read_hdf` returning unexpected records when filtering on categorical string columns using ``where`` parameter (:issue:`39189`)
+ - Bug in :func:`read_sas` raising ``ValueError`` when ``datetimes`` were null (:issue:`39725`)
+ - Bug in :func:`read_excel` dropping empty values from single-column spreadsheets (:issue:`39808`)
++- Bug in :meth:`DataFrame.to_string` misplacing the truncation column when ``index=False`` (:issue:`40907`)
+
+ Period
+ ^^^^^^
+diff --git a/pandas/io/formats/string.py b/pandas/io/formats/string.py
+index 84333cfc44..de53646b5f 100644
+--- a/pandas/io/formats/string.py
++++ b/pandas/io/formats/string.py
+@@ -77,7 +77,8 @@ class StringFormatter:
+     def _insert_dot_separator_horizontal(
+         self, strcols: List[List[str]], index_length: int
+     ) -> List[List[str]]:
+-        strcols.insert(self.fmt.tr_col_num + 1, [" ..."] * index_length)
++        tr_col_num = self.fmt.tr_col_num + 1 if self.fmt.index else self.fmt.tr_col_num
++        strcols.insert(tr_col_num, [" ..."] * index_length)
+         return strcols
+
+     def _insert_dot_separator_vertical(
+diff --git a/pandas/tests/io/formats/test_to_string.py b/pandas/tests/io/formats/test_to_string.py
+index 551734f343..f9b3cac352 100644
+--- a/pandas/tests/io/formats/test_to_string.py
+:
+
+36.q
+
+37.goto mypanda and open AUTHORS.md and made some change inside it
+
+38.git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   AUTHORS.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+39.git commit --amend:- to made a change in last commit
+and "enter"
+ 
+40.tap "i" on keyboard to write something"Taker ka msg"
+and then tap "esc" and tap":wq"
+and then enter
+
+Ex-
+commit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master, origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+diff --git a/doc/source/whatsnew/v1.3.0.rst b/doc/source/whatsnew/v1.3.0.rst
+index 1b011be839..2b0b62ab7f 100644
+--- a/doc/source/whatsnew/v1.3.0.rst
++++ b/doc/source/whatsnew/v1.3.0.rst
+@@ -750,6 +750,7 @@ I/O
+ - Bug in :func:`read_hdf` returning unexpected records when filtering on categorical string columns using ``where`` parameter (:issue:`39189`)
+ - Bug in :func:`read_sas` raising ``ValueError`` when ``datetimes`` were null (:issue:`39725`)
+ - Bug in :func:`read_excel` dropping empty values from single-column spreadsheecommit 526d52f91ee06ba9134762373ab3a0bb38395d8a (HEAD -> master, origin/master,
+origin/HEAD)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    BUG: to_string truncation column with index=False (#40907)
+
+diff --git a/doc/source/whatsnew/v1.3.0.rst b/doc/source/whatsnew/v1.3.0.rst
+index 1b011be839..2b0b62ab7f 100644
+--- a/doc/source/whatsnew/v1.3.0.rst
++++ b/doc/source/whatsnew/v1.3.0.rst
+@@ -750,6 +750,7 @@ I/O
+ - Bug in :func:`read_hdf` returning unexpected records when filtering on catego
+rical string columns using ``where`` parameter (:issue:`39189`)
+ - Bug in :func:`read_sas` raising ``ValueError`` when ``datetimes`` were null (
+:issue:`39725`)
+ - Bug in :func:`read_excel` dropping empty values from single-column spreadshee
+ts (:issue:`39808`)
+[master ba4335096d] Taker ka msg BUG: to_string truncation column with index=False (#40907)
+ Author: mikeronayne <michaelronayne@me.com>
+ Date: Thu Apr 15 18:11:24 2021 -0700
+ 3 files changed, 37 insertions(+), 1 deletion(-)
+
+41.git log -p -1
+commit 7ca7f215f9094ce1eb06a9e7042e1c081ef3af54 (HEAD -> master)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    Taker ka msg BUG: to_string truncation column with index=False (#40907)
+
+diff --git a/doc/source/whatsnew/v1.3.0.rst b/doc/source/whatsnew/v1.3.0.rst
+index 1b011be839..2b0b62ab7f 100644
+--- a/doc/source/whatsnew/v1.3.0.rst
++++ b/doc/source/whatsnew/v1.3.0.rst
+@@ -750,6 +750,7 @@ I/O
+ - Bug in :func:`read_hdf` returning unexpected records when filtering on categorical string columns using ``where`` parameter (:issue:`39189`)
+ - Bug in :func:`read_sas` raising ``ValueError`` when ``datetimes`` were null (:issue:`39725`)
+ - Bug in :func:`read_excel` dropping empty values from single-column spreadsheets (:issue:`39808`)
++- Bug in :meth:`DataFrame.to_string` misplacing the truncation column when ``index=False`` (:issue:`40907`)
+
+ Period
+ ^^^^^^
+diff --git a/pandas/io/formats/string.py b/pandas/io/formats/string.py
+index 84333cfc44..de53646b5f 100644
+--- a/pandas/io/formats/string.py
++++ b/pandas/io/formats/string.py
+@@ -77,7 +77,8 @@ class StringFormatter:
+     def _insert_dot_separator_horizontal(
+         self, strcols: List[List[str]], index_length: int
+     ) -> List[List[str]]:
+-        strcols.insert(self.fmt.tr_col_num + 1, [" ..."] * index_length)
++        tr_col_num = self.fmt.tr_col_num + 1 if self.fmt.index else self.fmt.tr_col_num
++        strcols.insert(tr_col_num, [" ..."] * index_length)
+         return strcols
+
+     def _insert_dot_separator_vertical(
+diff --git a/pandas/tests/io/formats/test_to_string.py b/pandas/tests/io/formats/test_to_string.py
+index 551734f343..f9b3cac352 100644
+--- a/pandas/tests/io/formats/test_to_string.py
++++ b/pandas/tests/io/formats/test_to_string.py
+@@ -106,6 +106,40 @@ def test_format_remove_leading_space_dataframe(input_array, expected):
+     assert df == expected
+
+
++@pytest.mark.parametrize(
++    "max_cols, expected",
++    [
++        (
++            10,
++            [
++                " 0   1   2   3   4   ...  6   7   8   9   10",
++                "  0   0   0   0   0  ...   0   0   0   0   0",
++                "  0   0   0   0   0  ...   0   0   0   0   0",
+:
+
+42.q
+
+43.git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   AUTHORS.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+44.git add .
+
+45.git commit --amend
+[master 01383a304f] added now Taker ka msg BUG: to_string truncation column with index=False (#40907)
+ Author: mikeronayne <michaelronayne@me.com>
+ Date: Thu Apr 15 18:11:24 2021 -0700
+ 4 files changed, 38 insertions(+), 1 deletion(-)
+
+46.git log -p -1
+commit 01383a304fa1abffa0443559345427225c36a23c (HEAD -> master)
+Author: mikeronayne <michaelronayne@me.com>
+Date:   Thu Apr 15 18:11:24 2021 -0700
+
+    added now Taker ka msg BUG: to_string truncation column with index=False (#40907)
+
+diff --git a/AUTHORS.md b/AUTHORS.md
+index 84fcfe05e3..768396b8e3 100644
+--- a/AUTHORS.md
++++ b/AUTHORS.md
+@@ -2,6 +2,7 @@ About the Copyright Holders
+ ===========================
+
+ *   Copyright (c) 2008-2011 AQR Capital Management, LLC
++this is a change
+
+     AQR Capital Management began pandas development in 2008. Development was
+     led by Wes McKinney. AQR released the source under this license in 2009.
+diff --git a/doc/source/whatsnew/v1.3.0.rst b/doc/source/whatsnew/v1.3.0.rst
+index 1b011be839..2b0b62ab7f 100644
+--- a/doc/source/whatsnew/v1.3.0.rst
++++ b/doc/source/whatsnew/v1.3.0.rst
+@@ -750,6 +750,7 @@ I/O
+ - Bug in :func:`read_hdf` returning unexpected records when filtering on categorical string columns using ``where`` parameter (:issue:`39189`)
+ - Bug in :func:`read_sas` raising ``ValueError`` when ``datetimes`` were null (:issue:`39725`)
+ - Bug in :func:`read_excel` dropping empty values from single-column spreadsheets (:issue:`39808`)
++- Bug in :meth:`DataFrame.to_string` misplacing the truncation column when ``index=False`` (:issue:`40907`)
+
+ Period
+ ^^^^^^
+diff --git a/pandas/io/formats/string.py b/pandas/io/formats/string.py
+index 84333cfc44..de53646b5f 100644
+--- a/pandas/io/formats/string.py
++++ b/pandas/io/formats/string.py
+@@ -77,7 +77,8 @@ class StringFormatter:
+     def _insert_dot_separator_horizontal(
+         self, strcols: List[List[str]], index_length: int
+     ) -> List[List[str]]:
+-        strcols.insert(self.fmt.tr_col_num + 1, [" ..."] * index_length)
++        tr_col_num = self.fmt.tr_col_num + 1 if self.fmt.index else self.fmt.tr_col_num
++        strcols.insert(tr_col_num, [" ..."] * index_length)
+         return strcols
+
+     def _insert_dot_separator_vertical(
+diff --git a/pandas/tests/io/formats/test_to_string.py b/pandas/tests/io/formats/test_to_string.py
+index 551734f343..f9b3cac352 100644
+--- a/pandas/tests/io/formats/test_to_string.py
++++ b/pandas/tests/io/formats/test_to_string.py
+@@ -106,6 +106,40 @@ def test_format_remove_leading_space_dataframe(input_array, expected):
+:
+
+47.q
+
+
+class 12---------------------------------------------------------------------------------------------------------
+1.Open git tutorials and start git bash and then
+git status
+fatal: not a git repository (or any of the parent directories): .git
+
+2.git init
+Initialized empty Git repository in C:/Users/bahvi/Desktop/code playground/Tuts/Git tutorials/.git/
+
+3. git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        first_rename.txt
+        myexcel.xlsx
+        static/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+4.git add .
+
+5.git commit -m "Initial Commit"
+[master (root-commit) b331c9c] Initial Commit
+ 4 files changed, 8 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 first_rename.txt
+ create mode 100644 myexcel.xlsx
+ create mode 100644 static/tex.txt
+
+6.git status
+On branch master
+nothing to commit, working tree clean
+
+7. After made a change in first_rename.txt and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first_rename.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+8.git add first_rename.txt
+
+9.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   first_rename.txt
+
+10.git restore --staged first_rename.txt
+
+11.git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first_rename.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+12.After deleting the content in first_rename.txt and write unuseful things so i used the command to get back the content
+git checkout -- first_rename.txt
+
+13.git status
+On branch master
+nothing to commit, working tree clean
+
+14.After made changes in .gitignore and first_rename.txt and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   first_rename.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+15.git checkout -- first_rename.txt
+
+16.git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+17.git add .gitignore
+
+18.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+19.git checkout -- .gitignore
+
+20.git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+21.git commit -m "this"
+[master a771461] this
+ 1 file changed, 1 insertion(+)
+
+22.git status
+On branch master
+nothing to commit, working tree clean
+
+23.After made changes in .gitignore and first_rename.txt and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   first_rename.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+24.if we want to make our working directory to match the last commit then use command
+git checkout -f
+
+25.git status
+On branch master
+nothing to commit, working tree clean
+
+
+class13-------------------------------------------------------------------------------------------------
+Step1:- make a account on git 
+
+Step2:-make a git git repository named as GitTutorialDemo 
+
+Step3:-Open git tutorials folder and start git bash
+
+1.git status
+On branch master
+nothing to commit, working tree clean
+
+2.git remote
+
+3.copy url from github to make a remote i.e,
+git remote add origin https://github.com/PriyanshuChaudhary7772/GitTutorialDemo.git
+
+4.git remote
+origin
+
+5.git remote -v
+origin  https://github.com/PriyanshuChaudhary7772/GitTutorialDemo.git (fetch)
+origin  https://github.com/PriyanshuChaudhary7772/GitTutorialDemo.git (push)
+
+6.git push -u origin master
+fatal: unable to access 'https://github.com/PriyanshuChaudhary7772/GitTutorialDemo.git/': Could not resolve host: github.com
+
+
+7.ssh-keygen -t ed25519 -C "s.priyanshu7772@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/bahvi/.ssh/id_ed25519):
+Created directory '/c/Users/bahvi/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/bahvi/.ssh/id_ed25519
+Your public key has been saved in /c/Users/bahvi/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:TrH2B6s7EGKJLKNyOAz/wtuA29V4EMWmBgJ/NZvHhl4 s.priyanshu7772@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|o    .+          |
+|...  oo*         |
+| o.oo++ E        |
+|+ o.*o.+ o       |
+|+= o....S .      |
+|=oo  +.+ . o     |
+|o+..o o.. o .    |
+| oo+..  .. .     |
+|. oo.   oo       |
++----[SHA256]-----+
+
+8.eval `ssh-agent -s`
+Agent pid 490
+
+9.ssh-add ~/.ssh/id_ed25519
+Identity added: /c/Users/bahvi/.ssh/id_ed25519 (s.priyanshu7772@gmail.com)
+
+10.tail ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDfpfTJpn5pB5qn/2UhJRyw3w25gtY7PuSCgMozlIaT3 s.priyanshu7772@gmail.com
+11.git push -u origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (10/10), 6.98 KiB | 340.00 KiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PriyanshuChaudhary7772/GitTutorialDemo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+12.git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+13.After made a .txt file named as this.txt and added some content to it and then
+git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        this.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+14.git add .
+
+15.git commit -m "Added this.txt github"
+[master e754bc3] Added this.txt github
+ 1 file changed, 1 insertion(+)
+ create mode 100644 this.txt
+
+16.git push -u origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 298 bytes | 149.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PriyanshuChaudhary7772/GitTutorialDemo.git
+   a771461..e754bc3  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+17. open github profile and refresh it and new this.txt file is found on the repository.
+
+18.git pull origin master:-to pull chages in repository
+  
+class 14------------------------------------------------------------------------------------------------------
+1.git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+2.git st
+git: 'st' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        reset
+        stage
+        stash
+        svn
+
+3. git config --global alias.st status
+
+4.git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+5.git commit
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+6.git ci
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+7.After made changes in this.txt and then
+git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   this.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+8.git add .
+
+9.git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   this.txt
+
+10.git config --global alias.unstage 'restore --staged --'
+
+11.git unstage this.txt
+
+12.git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   this.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+13.git config --global alias.last 'log -p -1'
+
+14.git last
+commit e754bc37695773a452461a633a03138c400b5c17 (HEAD -> master, origin/master)
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Sat Apr 24 12:53:51 2021 +0530
+
+    Added this.txt github
+
+diff --git a/this.txt b/this.txt
+new file mode 100644
+index 0000000..a2c8d75
+--- /dev/null
++++ b/this.txt
+@@ -0,0 +1 @@
++kjdvcgk
+\ No newline at end of file
+
+class 15------------------------------------------------------------------------------------
+1.git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   this.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2.git restore this.txt
+
+3.git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+4.git checkout -b develop:- it makes a new branch an puts you to that new branch
+Ex-
+git checkout -b develop
+Switched to a new branch 'develop'
+
+5.After made multiple changes in git tutorials folder and then
+git status
+On branch develop
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    myexcel.xlsx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        important files/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+6.create a text file in directory folder as changes.txt and put some content to it and then
+git status
+On branch develop
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    myexcel.xlsx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        directory/
+        important files/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+7.git add .
+
+8.git status
+On branch develop
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   directory/changes.txt
+        renamed:    myexcel.xlsx -> important files/myexcel.xlsx
+
+9.git commit -m "Beautifired structure"
+[develop f5f52a9] Beautifired structure
+ 2 files changed, 1 insertion(+)
+ create mode 100644 directory/changes.txt
+ rename myexcel.xlsx => important files/myexcel.xlsx (100%)
+
+10.git checkout master:- switch to master branch
+git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+11.After making .gitignore empty and use command
+rm -rf .git:- it removes git repository
+Ex-
+rm -rf .git
+
+12.git status
+fatal: not a git repository (or any of the parent directories): .git
+
+13.git init
+Initialized empty Git repository in C:/Users/bahvi/Desktop/code playground/Tuts/Git tutorials/.git/
+
+14.git add .
+
+15.git commit -m "Initial commit"
+[master (root-commit) 5598cc5] Initial commit
+ 14 files changed, 143 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 first_rename.txt
+ create mode 100644 garbage/error - Copy (2).log
+ create mode 100644 garbage/error - Copy (3).log
+ create mode 100644 garbage/error - Copy (4).log
+ create mode 100644 garbage/error - Copy (5).log
+ create mode 100644 garbage/error - Copy (6).log
+ create mode 100644 garbage/error - Copy (7).log
+ create mode 100644 garbage/error - Copy.log
+ create mode 100644 garbage/error.log
+ create mode 100644 myexcel.xlsx
+ create mode 100644 static/dir/This is the text doc.txt
+ create mode 100644 static/tex.txt
+ create mode 100644 this.txt
+
+16.git status
+On branch master
+nothing to commit, working tree clean
+
+17.After made changes in first_rename.txt and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first_rename.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+18.git add .
+
+19.git commit -m "Change first_rename"
+[master e8f9080] Change first_rename
+ 1 file changed, 1 insertion(+)
+
+20.git status
+On branch master
+nothing to commit, working tree clean
+
+21.After made changes in this.txt and first_rename.txt and then
+git commit -a -m:- it is used to staged and commit together
+Ex-
+git commit -a -m "Changed"
+[master ed2d609] Changed
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+22.git checkout -b develop
+Switched to a new branch 'develop'
+
+23.After deleting this.txt, first_rename.txt and myexcel.xlsx and then
+git commit -a -m "Changed"
+[develop a707648] Changed
+ 3 files changed, 8 deletions(-)
+ delete mode 100644 first_rename.txt
+ delete mode 100644 myexcel.xlsx
+ delete mode 100644 this.txt
+
+24.git status
+On branch develop
+nothing to commit, working tree clean
+
+25.git checkout master
+Switched to branch 'master'
+
+26.git checkout develop
+Switched to branch 'develop'
+
+27.git branch:-to check how many branches we have
+Ex-
+git branch
+* develop
+  master
+
+
+class 16-------------------------------------------------------------------------------------------
+1.git checkout master
+Switched to branch 'master'
+
+2.git status
+On branch master
+nothing to commit, working tree clean
+
+3.rm -rf .git
+
+4.git status
+fatal: not a git repository (or any of the parent directories): .git
+
+5.Make a new folder "MyWebsite" and open folder and use right click to start visual studio
+
+6.git status
+fatal: not a git repository (or any of the parent directories): .git
+
+7.git init
+Initialized empty Git repository in C:/Users/bahvi/Desktop/code playground/Tuts/Git tutorials/MyWebsite/.git/
+
+8.git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+9.git add .
+
+10.git commit -m "Initial commit"
+
+[master (root-commit) 52c451b] Initial commit
+ 1 file changed, 62 insertions(+)
+ create mode 100644 index.html
+
+11.git status
+On branch master
+nothing to commit, working tree clean
+
+12.git checkout -b tryCleanup
+Switched to a new branch 'tryCleanup'
+
+13.git status
+On branch tryCleanup
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+14.git add .
+
+15.git commit -m "broken features"
+[tryCleanup 0ae5c0c] broken features
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+16.git checkout master
+Switched to branch 'master'
+
+17.Replace "Link" and named as "About" and then
+git add .
+
+18.git add .
+
+19.git commit -m "Added About"
+[master 12c6bf4] Added About
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+20.git checkout tryCleanup
+Switched to branch 'tryCleanup'
+
+21.After made some changes in index.html and then
+git status
+On branch tryCleanup
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+22.git add .
+
+23.git commit -m "Fixed the structure"
+[tryCleanup 9b1f9be] Fixed the structure
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+24.git checkout master
+Switched to branch 'master'
+
+25.git branch
+* master
+  tryCleanup
+
+26.git checkout tryCleanup
+Switched to branch 'tryCleanup'
+
+27.After made some changes in index.html and then
+git commit -a -m "Made changes to Dropdown"
+[tryCleanup 61ac841] Made changes to Dropdown
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+28.git checkout master
+Switched to branch 'master'
+
+29.git status
+On branch master
+nothing to commit, working tree clean
+
+30.Merge both branches by using 
+git merge BRANCHNAME
+
+31.git merge tryCleanup
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+32.After Accepting incoming change in visual studio and then
+git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+33.git add .
+
+34.git commit
+[master 687e3a4] Merge branch 'tryCleanup'
+
+
+class 17------------------------------------------------------------------------------------
+1.git status
+fatal: not a git repository (or any of the parent directories): .git
+
+2.git init
+Initialized empty Git repository in C:/Users/bahvi/Desktop/code playground/Tuts/Git tutorials/.git/
+
+3.git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        MyWebsite/
+        first_rename.txt
+        garbage/
+        myexcel.xlsx
+        static/
+        this.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+4.git add .
+warning: adding embedded git repository: MyWebsite
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> MyWebsite
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached MyWebsite
+hint:
+hint: See "git help submodule" for more information.
+
+5.git commit -m "Initial commit"
+[master (root-commit) a8517d6] Initial commit
+ 15 files changed, 147 insertions(+)
+ create mode 100644 .gitignore
+ create mode 160000 MyWebsite
+ create mode 100644 first_rename.txt
+ create mode 100644 garbage/error - Copy (2).log
+ create mode 100644 garbage/error - Copy (3).log
+ create mode 100644 garbage/error - Copy (4).log
+ create mode 100644 garbage/error - Copy (5).log
+ create mode 100644 garbage/error - Copy (6).log
+ create mode 100644 garbage/error - Copy (7).log
+ create mode 100644 garbage/error - Copy.log
+ create mode 100644 garbage/error.log
+ create mode 100644 myexcel.xlsx
+ create mode 100644 static/dir/This is the text doc.txt
+ create mode 100644 static/tex.txt
+ create mode 100644 this.txt
+
+6.After open visual studio from git tuorial folder and made a file index.html and put some content to it and then
+git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+7.git add .
+
+8.git commit -m "Added index.html"
+[master 0943bea] Added index.html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+9.git status
+On branch master
+nothing to commit, working tree clean
+
+10.After put some changes into index.html and then
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+11.git add .
+
+12.git commit -m "Added index.html title 1"
+[master 9af0c60] Added index.html title 1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+13.After put some changes into index.html and then
+git add .
+
+14.git commit -m "Added index.html title 2"
+[master 1106778] Added index.html title 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+15.git status
+On branch master
+nothing to commit, working tree clean
+
+16.git checkout -b issue1
+Switched to a new branch 'issue1'
+
+17.git commit -a -m "This is c4"
+[issue1 de7af30] This is c4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+18.git commit -a -m "This is c5"
+[issue1 f7cd8a6] This is c5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+19.git commit -a -m "This is c7"
+[issue1 34e4fc1] This is c7
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+20.git status
+On branch issue1
+nothing to commit, working tree clean
+
+21.git checkout master
+Switched to branch 'master'
+
+22.git commit -a -m "This is c6"
+[master 84144a9] This is c6
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+23.git merge issue1
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+24.git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+25.git add index.html
+
+26.git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   index.html
+
+27.git commit -m "Merged issue1"
+[master dc6b845] Merged issue1
+
+28.git log
+commit dc6b8456150aeff61185b2342db3c11f1e1daeeb (HEAD -> master)
+Merge: 84144a9 34e4fc1
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:21:29 2021 +0530
+
+    Merged issue1
+
+commit 84144a9a45443d6f327cc686be397b1855a71967
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:15:52 2021 +0530
+
+    This is c6
+
+commit 34e4fc1bede750b31f7695ef49b76c8862a437f8 (issue1)
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:12:26 2021 +0530
+
+    This is c7
+
+commit f7cd8a6eddd8acfc97fecc4a02d795f5e8ec83c0
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:11:08 2021 +0530
+
+:
+
+29.q
+
+30.git branch
+  issue1
+* master
+
+31.git  checkout -b issue2
+Switched to a new branch 'issue2'
+
+32.git add .
+
+33.git commit -m "Did some gadbad"
+[issue2 8b16ef0] Did some gadbad
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+34.git  checkout master
+Switched to branch 'master'
+
+35.git status
+On branch master
+nothing to commit, working tree clean
+
+36.git branch
+  issue1
+  issue2
+* master
+
+37.git branch -v
+  issue1 34e4fc1 This is c7
+  issue2 8b16ef0 Did some gadbad
+* master dc6b845 Merged issue1
+
+38.git branch --merged
+  issue1
+* master
+
+39.git branch --no-merged
+  issue2
+
+40.git branch -d issue2
+error: The branch 'issue2' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D issue2'.
+
+41.git branch -d issue1
+Deleted branch issue1 (was 34e4fc1).
+
+42.git branch
+  issue2
+* master
+
+43.git branch -d issue2
+error: The branch 'issue2' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D issue2'.
+
+44.git branch -D issue2
+Deleted branch issue2 (was 8b16ef0).
+
+45.git branch
+* master
+
+
+class 18--------------------------------------------------------------------------------------------
+
+
+
+class 19--------------------------------------------------------------------------------------------
+1.git status
+On branch master
+nothing to commit, working tree clean
+
+2.git log
+commit dc6b8456150aeff61185b2342db3c11f1e1daeeb (HEAD -> master)
+Merge: 84144a9 34e4fc1
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:21:29 2021 +0530
+
+    Merged issue1
+
+commit 84144a9a45443d6f327cc686be397b1855a71967
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:15:52 2021 +0530
+
+    This is c6
+
+commit 34e4fc1bede750b31f7695ef49b76c8862a437f8
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:12:26 2021 +0530
+
+    This is c7
+
+commit f7cd8a6eddd8acfc97fecc4a02d795f5e8ec83c0
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:11:08 2021 +0530
+
+
+3.q
+
+4.git branch
+* master
+
+5.git checkout -b bugfix
+Switched to a new branch 'bugfix'
+
+6.git branch
+* bugfix
+  master
+
+7.git status
+On branch bugfix
+nothing to commit, working tree clean
+
+8.git log
+commit dc6b8456150aeff61185b2342db3c11f1e1daeeb (HEAD -> bugfix, master)
+Merge: 84144a9 34e4fc1
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:21:29 2021 +0530
+
+    Merged issue1
+
+commit 84144a9a45443d6f327cc686be397b1855a71967
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:15:52 2021 +0530
+
+    This is c6
+
+commit 34e4fc1bede750b31f7695ef49b76c8862a437f8
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:12:26 2021 +0530
+
+    This is c7
+
+commit f7cd8a6eddd8acfc97fecc4a02d795f5e8ec83c0
+Author: Priyanshu Chaudhary <priyanshutaker7772@gmail.com>
+Date:   Fri Apr 30 13:11:08 2021 +0530
+
+:
+
+9.q
+
+10.After made a change in first_rename.txt and delete myexcel.xlsx and then
+git status
+On branch bugfix
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first_rename.txt
+        deleted:    myexcel.xlsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+11.git add .
+
+12.git commit -m "Fixed the bug"
+[bugfix 9db9a34] Fixed the bug
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ delete mode 100644 myexcel.xlsx
+
+13.git status
+On branch bugfix
+nothing to commit, working tree clean
+
+14.git checkout master
+Switched to branch 'master'
+
+15.git branch
+  bugfix
+* master
+
+16.git remote
+
+17.git remote -v
+
+18.goto github and make a new repository named as "Sample repository" and then
+git push -u origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (30/30), done.
+Writing objects: 100% (34/34), 8.89 KiB | 433.00 KiB/s, done.
+Total 34 (delta 16), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (16/16), done.
+To https://github.com/PriyanshuChaudhary7772/DemoRepository.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+19.git branch
+  bugfix
+* master
+
+20.git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+21.git checkout bugfix
+Switched to branch 'bugfix'
+
+22.git push origin bugfix
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 330 bytes | 165.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bugfix' on GitHub by visiting:
+remote:      https://github.com/PriyanshuChaudhary7772/DemoRepository/pull/new/bugfix
+remote:
+To https://github.com/PriyanshuChaudhary7772/DemoRepository.git
+ * [new branch]      bugfix -> bugfix
+
+23.git push origin bugfix:mybugfix
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'mybugfix' on GitHub by visiting:
+remote:      https://github.com/PriyanshuChaudhary7772/DemoRepository/pull/new/mybugfix
+remote:
+To https://github.com/PriyanshuChaudhary7772/DemoRepository.git
+ * [new branch]      bugfix -> mybugfix
+
+24.git branch
+* bugfix
+  master
+
+25.git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+26.git branch
+  bugfix
+* master
+
+27.git branch -d bugfix
+error: The branch 'bugfix' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D bugfix'.
+
+28.git merge bugfix
+Updating dc6b845..9db9a34
+Fast-forward
+ first_rename.txt |   3 ++-
+ myexcel.xlsx     | Bin 8742 -> 0 bytes
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ delete mode 100644 myexcel.xlsx
+
+29.git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+30.git branch -d bugfix
+Deleted branch bugfix (was 9db9a34).
+
+31.git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PriyanshuChaudhary7772/DemoRepository.git
+   dc6b845..9db9a34  master -> master
+
+32.git push -d origin bugfix
+Logon failed, use ctrl+c to cancel basic credential prompt.
+To https://github.com/PriyanshuChaudhary7772/DemoRepository.git
+ - [deleted]         bugfix
+
+33.git push -d origin mybugfix
+Logon failed, use ctrl+c to cancel basic credential prompt.
+To https://github.com/PriyanshuChaudhary7772/DemoRepository.git
+ - [deleted]         mybugfix
+
+
+
+
+
